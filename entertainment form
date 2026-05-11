@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entertainment Form</title>
 
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      /* Background Image */
+      background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+
+    .container{
+      width:400px;
+      background:rgba(0,0,0,0.75);
+      padding:30px;
+      border-radius:15px;
+      color:white;
+      box-shadow:0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .container h2{
+      text-align:center;
+      margin-bottom:20px;
+      color:#ffcc00;
+    }
+
+    .input-group{
+      margin-bottom:15px;
+    }
+
+    .input-group label{
+      display:block;
+      margin-bottom:5px;
+      font-weight:bold;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea{
+      width:100%;
+      padding:10px;
+      border:none;
+      border-radius:8px;
+      outline:none;
+    }
+
+    .input-group textarea{
+      resize:none;
+      height:80px;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      background:#ffcc00;
+      color:black;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#ffaa00;
+      transform:scale(1.03);
+    }
+
+    .message{
+      margin-top:15px;
+      text-align:center;
+      color:#00ff99;
+      font-weight:bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Entertainment Form</h2>
+
+    <form id="entertainmentForm">
+
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="input-group">
+        <label>Favorite Entertainment</label>
+        <select id="category" required>
+          <option value="">Select</option>
+          <option>Music</option>
+          <option>Movies</option>
+          <option>Games</option>
+          <option>Sports</option>
+          <option>Comedy</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Comments</label>
+        <textarea id="comments"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+
+      <div class="message" id="message"></div>
+
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("entertainmentForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function(event){
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+
+      message.innerHTML = "Thank you, " + name + "! Your form has been submitted.";
+
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
