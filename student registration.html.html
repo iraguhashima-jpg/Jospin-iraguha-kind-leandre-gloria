@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+
+  .card {
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  label {
+    font-size: 14px;
+    color: #444;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  input:focus, select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px #667eea;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #4a5bdc;
+  }
+
+  #message {
+    text-align: center;
+    margin-top: 12px;
+    font-weight: bold;
+    color: green;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>Student Registration</h2>
+
+  <form id="studentForm">
+    <label>Full Name</label>
+    <input type="text" id="name" placeholder="Enter full name" required>
+
+    <label>Email</label>
+    <input type="email" id="email" placeholder="Enter email" required>
+
+    <label>Phone</label>
+    <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+    <label>Gender</label>
+    <select id="gender" required>
+      <option value="">Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+
+    <label>Course</label>
+    <select id="course" required>
+      <option value="">Choose Course</option>
+      <option>Computer Science</option>
+      <option>Software Engineering</option>
+      <option>Networking</option>
+      <option>Information Systems</option>
+    </select>
+
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Create password" required>
+
+    <button type="submit">Register Student</button>
+  </form>
+
+  <div id="message"></div>
+</div>
+
+<script>
+  document.getElementById("studentForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+
+    document.getElementById("message").innerText =
+      "🎓 Welcome " + name + "! Registration successful.";
+  });
+</script>
+
+</body>
+</html>
