@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Website</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      color:#333;
+    }
+
+    header{
+      background:#222;
+      color:white;
+      padding:20px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    header h1{
+      font-size:28px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#00bcd4;
+    }
+
+    .hero{
+      height:90vh;
+      background:linear-gradient(to right,#00bcd4,#3f51b5);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero h2{
+      font-size:50px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:20px;
+      max-width:700px;
+      margin-bottom:30px;
+    }
+
+    .hero button{
+      padding:15px 35px;
+      border:none;
+      background:white;
+      color:#333;
+      font-size:18px;
+      border-radius:30px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .hero button:hover{
+      background:#222;
+      color:white;
+    }
+
+    .services{
+      padding:60px 50px;
+      text-align:center;
+    }
+
+    .services h2{
+      margin-bottom:40px;
+      font-size:40px;
+    }
+
+    .cards{
+      display:flex;
+      gap:20px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      width:300px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#3f51b5;
+    }
+
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MyWebsite</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Build Amazing Websites</h2>
+    <p>
+      Create beautiful and modern websites using HTML, CSS and JavaScript.
+    </p>
+
+    <button onclick="showMessage()">
+      Get Started
+    </button>
+  </section>
+
+  <section class="services">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>Modern and responsive website designs for all devices.</p>
+      </div>
+
+      <div class="card">
+        <h3>Development</h3>
+        <p>Fast and professional website development solutions.</p>
+      </div>
+
+      <div class="card">
+        <h3>SEO</h3>
+        <p>Improve your website ranking on search engines.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Leandre Website | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function showMessage(){
+      alert("Welcome to MyWebsite!");
+    }
+  </script>
+
+</body>
+</html>
